@@ -47,7 +47,7 @@ head(single.year.data)
 
 # Data Visualisations 
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
 library(tidyverse)
 library(countrycode)
 career.long.data$country.name <- countrycode(career.long.data$cntry, origin = 'iso3c', destination = 'country.name')
@@ -67,7 +67,7 @@ ggplot(top_20_cntry, aes(x = reorder(country.name, n), y = n)) +
   theme_minimal()
 ```
 
-```{r}
+```{r, echo=FALSE, warning=FALSE}
 single.year.data$country.name <- countrycode(single.year.data$cntry, origin = 'iso3c', destination = 'country.name')
 top_20_cntrys <- single.year.data |>
   count(country.name) |>
