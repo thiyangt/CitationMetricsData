@@ -156,6 +156,54 @@ head(single.year.data)
 #> 6                       1              106831
 ```
 
+# Data Visualisations
+
+``` r
+library(tidyverse)
+library(countrycode)
+career.long.data$country.name <- countrycode(career.long.data$cntry, origin = 'iso3c', destination = 'country.name')
+top_20_cntry <- career.long.data %>%
+  count(country.name) %>%
+  arrange(desc(n)) %>%
+  head(20)
+
+# Plot the bar chart
+ggplot(top_20_cntry, aes(x = reorder(country.name, n), y = n)) +
+  geom_bar(stat = "identity", fill = "#1b9e77") +
+  coord_flip() +  # Flip coordinates to make it horizontal
+  labs(title = "Top 20 Countries by Number of Top-Cited Researchers",
+  subtitle= "(Based on Career-long Data)",
+       x = "Country",
+       y = "Number of Researchers") +
+  theme_minimal()
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+``` r
+single.year.data$country.name <- countrycode(single.year.data$cntry, origin = 'iso3c', destination = 'country.name')
+#> Warning: Some values were not matched unambiguously: SUX
+```
+
+``` r
+top_20_cntrys <- single.year.data |>
+  count(country.name) |>
+  arrange(desc(n)) |>
+  head(20)
+
+# Plot the bar chart
+ggplot(top_20_cntrys, aes(x = reorder(country.name, n), y = n)) +
+  geom_bar(stat = "identity", fill = "#d95f02") +
+  coord_flip() +  # Flip coordinates to make it horizontal
+  labs(title = "Top 20 Countries by Number of Top-Cited Researchers ",
+       subtitle = "(Based on Single-year Data)",
+       x = "Country",
+       y = "Number of Researchers") +
+  theme_minimal()
+```
+
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+
 ## Data Source
 
 Ioannidis, John P.A. (2024), “August 2024 data-update for”Updated

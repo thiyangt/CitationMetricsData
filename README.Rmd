@@ -45,6 +45,45 @@ head(career.long.data)
 head(single.year.data)
 ```
 
+# Data Visualisations 
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(countrycode)
+career.long.data$country.name <- countrycode(career.long.data$cntry, origin = 'iso3c', destination = 'country.name')
+top_20_cntry <- career.long.data %>%
+  count(country.name) %>%
+  arrange(desc(n)) %>%
+  head(20)
+
+# Plot the bar chart
+ggplot(top_20_cntry, aes(x = reorder(country.name, n), y = n)) +
+  geom_bar(stat = "identity", fill = "#1b9e77") +
+  coord_flip() +  # Flip coordinates to make it horizontal
+  labs(title = "Top 20 Countries by Number of Top-Cited Researchers",
+  subtitle= "(Based on Career-long Data)",
+       x = "Country",
+       y = "Number of Researchers") +
+  theme_minimal()
+```
+
+```{r}
+single.year.data$country.name <- countrycode(single.year.data$cntry, origin = 'iso3c', destination = 'country.name')
+top_20_cntrys <- single.year.data |>
+  count(country.name) |>
+  arrange(desc(n)) |>
+  head(20)
+
+# Plot the bar chart
+ggplot(top_20_cntrys, aes(x = reorder(country.name, n), y = n)) +
+  geom_bar(stat = "identity", fill = "#d95f02") +
+  coord_flip() +  # Flip coordinates to make it horizontal
+  labs(title = "Top 20 Countries by Number of Top-Cited Researchers ",
+       subtitle = "(Based on Single-year Data)",
+       x = "Country",
+       y = "Number of Researchers") +
+  theme_minimal()
+```
 
 ## Data Source
 
