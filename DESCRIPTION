@@ -1,11 +1,13 @@
 Package: CitationMetricsData
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Citation Metrics for Top-Cited Scientists
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Thiyanga S. Talagala
+Maintainer: Thiyanga S. Talagala <ttalagala@sjp.ac.lk>
+Description: This package provides access to a publicly available database of top-cited scientists, offering standardized citation metrics and author performance indicators. The dataset includes information on total citations, h-index, co-authorship adjusted hm-index, citations by authorship position, and a composite c-score. Separate metrics are available for career-long impact (updated to end-of-2023) and single-year impact (citations received during 2023). Data taken from "Ioannidis, John P.A. (2024), “August 2024 data-update for "Updated science-wide author databases of standardized citation indicators"”, Elsevier Data Repository, V7, doi: 10.17632/btchxktzyw.7".
+License: CC BY-NC 3.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.3.1
