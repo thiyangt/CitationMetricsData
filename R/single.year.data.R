@@ -1,10 +1,10 @@
 #' single.year.data: contains single recent year data pertain to citations received during calendar year 2023
 #'
 #'@description This dataset contains Table 1 (Table_1_Authors_singleyr_2023_pubs_since_1788_wopp_extracted_202408.xlsx)of August 2024 data-update for "Updated science-wide author databases of standardized citation indicators"
-#'@format A data frame with 223152  rows and 47 variables:
+#'@format A data frame with 223,152 rows and 47 variables:
 #'\describe{
 #' \item{authfull}{author name}
-#' \item{inst_name}{institution name (large institutions only)}
+#' \item{inst\_name}{institution name (large institutions only)}
 #' \item{cntry}{country associated with most recent institution}
 #' \item{np6023}{# papers 1960-2023}
 #' \item{firstyr}{year of first publication}
@@ -23,7 +23,7 @@
 #' \item{npciting (ns)}{number of distinct citing papers}
 #' \item{cprat (ns)}{ratio of total citations to distinct citing papers}
 #' \item{np6023 cited2323 (ns)}{number of papers 1960-2023 that have been cited at least once}
-#' \item{self%}{self-citation percentage}
+#' \item{self\%}{self-citation percentage}
 #' \item{rank}{rank based on composite score c}
 #' \item{nc2323}{total cites 2023-2023}
 #' \item{h23}{h-index as of end-2023}

@@ -4,7 +4,7 @@
 #'@format A data frame with 217097 rows and 47 variables:
 #'\describe{
 #' \item{authfull}{author name}
-#' \item{inst_name}{institution name (large institutions only)}
+#' \item{inst\_name}{institution name (large institutions only)}
 #' \item{cntry}{country associated with most recent institution}
 #' \item{np6023}{number of papers 1960-2023}
 #' \item{firstyr}{year of first publication}
@@ -23,7 +23,7 @@
 #' \item{npciting (ns)}{number of distinct citing papers}
 #' \item{cprat (ns)}{ratio of total citations to distinct citing papers}
 #' \item{np6023 cited9623 (ns)}{number of papers 1960-2023 that have been cited at least once}
-#' \item{self%}{self-citation percentage}
+#' \item{self\%}{self-citation percentage}
 #' \item{rank}{rank based on composite score c}
 #' \item{nc9623}{total cites 1996-2023}
 #' \item{h23}{h-index as of end-2023}
@@ -38,9 +38,9 @@
 #' \item{npciting}{number of distinct citing papers}
 #' \item{cprat}{ratio of total citations to distinct citing papers}
 #' \item{np6023 cited9623}{number of papers 1960-2023 that have been cited at least once}
-#' \item{np6023_rw}{# papers 1960-2023 marked as Retraction in RWDB}
-#' \item{nc9623_to_rw}{total cites 1996-2023 to papers (by this author) marked as Retraction in RWDB}
-#' \item{nc9623_rw}{total cites 1996-2023 from papers (by any author) marked as Retraction in RWDB}
+#' \item{np6023\_rw}{# papers 1960-2023 marked as Retraction in RWDB}
+#' \item{nc9623\_to\_rw}{total cites 1996-2023 to papers (by this author) marked as Retraction in RWDB}
+#' \item{nc9623\_rw}{total cites 1996-2023 from papers (by any author) marked as Retraction in RWDB}
 #' \item{sm-subfield-1}{top ranked Science-Metrix category (subfield) for author}
 #' \item{sm-subfield-1-frac}{associated category fraction}
 #' \item{sm-subfield-2}{second ranked Science-Metrix category (subfield) for author}
