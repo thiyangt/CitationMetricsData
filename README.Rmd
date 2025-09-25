@@ -89,4 +89,12 @@ ggplot(top_20_cntrys, aes(x = reorder(country.name, n), y = n)) +
 
 Ioannidis, John P.A. (2024), “August 2024 data-update for "Updated science-wide author databases of standardized citation indicators"”, Elsevier Data Repository, V7, doi: 10.17632/btchxktzyw.7
 
-Link: https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7
+Link: 
+
+2024-september
+
+https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7
+
+2025-September
+
+https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/8
